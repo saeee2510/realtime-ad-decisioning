@@ -92,3 +92,4 @@ The script fails if p99 latency exceeds 20 ms or more than 1% of requests error.
 - The event id is marked as seen before the database update, so a crash between the two can drop an event. A transactional outbox, or storing processed ids in PostgreSQL in the same transaction, would fix it.
 - Impression updates hit one row per campaign; batching them would reduce database load at high traffic.
 - Predicted CTR is a static number per campaign; the natural next step is a model that predicts it per request.
+# realtime-ad-decisioning
